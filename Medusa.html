@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museo Aurora – Opere ed Eventi</title>
+
+    <!-- Bootstrap CSS -->
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+        rel="stylesheet">
+
+    <style>
+        /* Esempio uso ID */
+#hero {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/0/00/Medusa_by_Caravaggio.jpg');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 350px;
+    position: relative; /* opzionale ma utile */
+}
+
+#hero1 {
+    background-image: url('https://live.staticflickr.com/411/33053967462_2fdb4d7912_b.jpg');
+    background-size: 100% 120%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 350px;
+    position: relative;
+}
+
+.overlay1 {
+    position: absolute;
+    top: 0;
+    left: 50%;              /* centro rispetto al contenitore */
+    transform: translate(-50%, -5%); /* ri-centra l’elemento */
+    width: 110%;             /* stessa larghezza dell’immagine */
+    height: 110%;
+    background: rgba(0,0,0,0.4);
+    z-index: 1;
+}
+
+
+
+		.navbar a:hover {
+    background: rgba(255,255,255,0.1);
+    border-radius: 5px;
+}
+
+
+        /* Esempio uso CLASS */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.4);
+            z-index: 1;
+        }
+
+        .titolo-sezione {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-top: 40px;
+        }
+
+        /* Posizionamento */
+        .box-info {
+            position: relative;
+            padding: 20px;
+        }
+
+        /* Z-index per sovrapposizioni */
+        .badge-evento {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background: crimson;
+            border: 1px solid #000;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="bg-dark text-white p-3 text-center">
+        <h1>Museo Aurora</h1>
+        <p>Opere d’arte, cultura ed eventi speciali</p>
+    </header>
+	
+    <nav class="navbar navbar-expand bg-dark sticky-top"> 
+    	<ul class="navbar-nav mx-auto" >
+       		<li class="nav-item" class="right" > 
+            	<a class="nav-link text-white px-3" href="https://danielixtube16.github.io/MuseoLaVenere/Museo.html">Home</a> 
+            </li>
+        	<li class="nav-item"> 
+            	<a class="nav-link text-white px-3" href="https://danielixtube16.github.io/MuseoLaVenere/LaVenere.html">La Nascita di Venere</a> 
+            </li>
+            <li class="nav-item"> 
+            <a class="nav-link text-white px-3" href="https://danielixtube16.github.io/MuseoLaVenere/Annunciazione.html">Annunciazione</a> 
+            </li> 
+            <li class="nav-item"> 
+            <a class="nav-link text-white px-3" href="https://danielixtube16.github.io/MuseoLaVenere/Medusa.html">Medusa</a> 
+            </li> 
+            </ul>
+            </nav>
+    
+    <!-- HERO -->
+    <section id="hero">
+        <div class="overlay"></div>
+    </section>
+
+    <!-- OPERE -->
+    <section class="container">
+        <h2 class="titolo-sezione">Medusa</h2>
+
+        <div class="col-md-12 box-info border rounded">
+                <h3>Medusa</h3>
+                <p class="text-muted">Caravaggio, 1597</p>
+                <p>la prima è un dipinto a olio su tela, montato su uno scudo convesso di legno di fico (50 x 48 cm), eseguito tra il 1596 ed il 1598. L'opera si trova in una collezione privata in Italia. La prima versione è stata sottoposta ad interventi diagnostici che hanno evidenziato vari pentimenti e la presenza di disegni preparatori "a carbone". È detta "Murtola", a seguito del madrigale che Gaspare Murtola compose nel 1606 in onore del dipinto che ebbe grande fama. Secondo alcuni studiosi (Marini, Mahon, Gregori) si tratterebbe dell'autografo originario, mentre la versione degli Uffizi, priva di pentimenti, sarebbe una copia di mano dello stesso artista. Ciò che rende eccezionale questa prima versione è il fatto che conserva la firma di Caravaggio, impressa nel sangue che sgorga dalla testa;</p>
+            </div>
+    </section>
+	<br>
+    <br>
+	<section id="hero1">
+        <div class="overlay1"></div>
+    </section>
+
+    <!-- EVENTI -->
+    <section class="container">
+        <h2 class="titolo-sezione">Eventi in programma</h2>
+
+        <!-- Lista -->
+        <ul class="list-group mt-3">
+            <li class="list-group-item">Visita guidata notturna – ogni venerdì</li>
+            <li class="list-group-item">Laboratorio di analisi del dipinto – sabato mattina</li>
+            <li class="list-group-item">Conferenza su Botticelli – 12 marzo</li>
+        </ul>
+        <!-- Tabella -->
+        <table class="table table-striped table-bordered mt-4">
+            <thead class="table-dark">
+                <tr>
+                    <th>Evento</th>
+                    <th>Data</th>
+                    <th>Orario</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Tour guidato</td>
+                    <td>5 aprile</td>
+                    <td>15:00</td>
+                </tr>
+                <tr>
+                    <td>Workshop di analisi scientifica</td>
+                    <td>10 aprile</td>
+                    <td>10:00</td>
+                </tr>
+                <tr>
+                    <td>Mostra temporanea</td>
+                    <td>dal 20 aprile</td>
+                    <td>09:00 - 18:00</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <footer class="bg-dark text-white text-center p-3 mt-5">
+        © 2026 Museo Aurora – Tutti i diritti riservati a maydanskyy
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script 
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
+    </script>
+</body>
+</html>
